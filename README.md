@@ -27,7 +27,7 @@ Available Configuration Options
 - `autocompile` Configuration for each filetype.
 	- `compiler` Compiler to be used.
 	- `compiler_args` Compiler args to be passed.
-	- `output_format` Filename modifier for output file. (See `:h &p` for list of modifiers)
+	- `output_format` Filename modifier for output file. (See `:h %:p` for list of modifiers)
 - `silent` Visibilty of rundi command.
 - `keymap` Keymap for rundi.
 
