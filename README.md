@@ -14,8 +14,9 @@ You can install randi.nvim using your preferred plugin manager for Neovim. Here 
 
 1. Add the following line to your Neovim configuration file (`init.lua` for Lua-based configurations or `init.vim` for Vimscript configurations):
 
-   ```lua
-   Plug 's3dman/rundi.nvim'
+```lua
+Plug 's3dman/rundi.nvim'
+```
    
 2. Reload your Neovim configuration or restart Neovim.
 3. Run :PlugInstall in Neovim to install the plugin.
@@ -24,8 +25,9 @@ You can install randi.nvim using your preferred plugin manager for Neovim. Here 
 ### Using packer.nvim
 1. Add the following line to your Neovim configuration file (init.lua for Lua-based configurations):
 
-	```lua
-	use 's3dman/rundi.nvim'
+```lua
+use 's3dman/rundi.nvim'
+```
 2. Reload your Neovim configuration or restart Neovim.
 3. Run :PackerInstall in Neovim to install the plugin.
 
@@ -43,6 +45,7 @@ local randi = require'randi'
 randi.setup({
   option_name_1 = "value_1",
 })
+```
 
 ## Usage
 Describe how to use the plugin once it's installed and configured. Include code examples or usage scenarios to help users get started.
