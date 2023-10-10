@@ -2,19 +2,22 @@
 local config = {
   autocompile = {},
   silent = true,
+  keymap = "<C-c>",
 }
 
--- Function to set up autocompile for a specific file type
-local function setup_autocompile(filetype)
-  local compile_command = config.autocompile[filetype]
-  if compile_command then
-    local silent_option = config.silent and " :silent" or ""
-    vim.cmd([[
-      autocmd FileType ]] .. filetype .. [[ nnoremap <buffer> <C-c> :split<CR>:te ]] .. compile_command .. [[<CR>i]])
+local function setup_autocompile(filetype, options)
+  local ac = config.autocompile[filetype]
+  if ac then
+    local silent_option = config.silent and "<silent>" or ""
+    local compiler_args = options.compiler_args and (" " .. options.compiler_args) or ""
+    local output_flag = options.output_format and (" -o " .. options.output_format) or ""
+    local execute_flag = options.output_format and (" && ./" .. options.output_format) or ""
+    local input_file = ' "%"'
+	local keymap = " " .. config.keymap
+    vim.cmd([[ autocmd FileType ]] .. filetype .. [[ nnoremap <buffer> ]] .. silent_option .. keymap .. [[ :split<CR>:te ]] .. options.compiler .. compiler_args .. input_file .. output_flag .. execute_flag .. [[<CR>i]])
   end
 end
 
--- Function to allow users to override configuration options
 local function setup(user_config)
   for key, value in pairs(user_config) do
     if config[key] ~= nil then
@@ -22,13 +25,11 @@ local function setup(user_config)
     end
   end
 
-  -- Automatically set up autocompile for default file types after configuration changes
-  for filetype, _ in pairs(config.autocompile) do
-    setup_autocompile(filetype)
+  for filetype, options in pairs(config.autocompile) do
+    setup_autocompile(filetype, options)
   end
 end
 
--- Export setup function and configuration for use in user's nvim config
 return {
   setup = setup,
 }
