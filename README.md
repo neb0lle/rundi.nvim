@@ -24,12 +24,12 @@ use 's3dman/rundi.nvim'
 rundi.nvim offers several configuration options to customize its behavior. You can override these options in your Neovim configuration.
 
 Available Configuration Options
-- `autocompile` (configuration for each filetype)
-	- `compiler` (compiler to be used)
-	- `compiler_args` (compiler args to be passed.)
-	- `output_format` (filename modifier for output file) See `:h &p` for list of modifiers.
-- `silent` ()
-- `keymap` (keymap for rundi)
+- `autocompile` Configuration for each filetype.
+	- `compiler` Compiler to be used.
+	- `compiler_args` Compiler args to be passed.
+	- `output_format` Filename modifier for output file. (See `:h &p` for list of modifiers)
+- `silent` Visibilty of rundi command.
+- `keymap` Keymap for rundi.
 
 Example configuration:
 ```lua
@@ -58,7 +58,7 @@ rundi.setup({
 ```
 
 ## Usage
-#TODO
+Press `Ctrl + c` or whatever keymap that you configured.
 
 ## License
 This plugin is licensed under the MIT License. See the LICENSE file for details.
