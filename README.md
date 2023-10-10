@@ -10,26 +10,15 @@ rundi.nvim is a Neovim plugin that makes it easy to generate compile command map
 
 You can install rundi.nvim using your preferred plugin manager for Neovim. Here are examples using popular plugin managers:
 
-### Using vim-plug
-
-1. Add the following line to your Neovim configuration file (`init.lua` for Lua-based configurations or `init.vim` for Vimscript configurations):
-
+### [vim-plug](https://github.com/junegunn/vim-plug)
 ```lua
 Plug 's3dman/rundi.nvim'
 ```
-   
-2. Reload your Neovim configuration or restart Neovim.
-3. Run :PlugInstall in Neovim to install the plugin.
 
-
-### Using packer.nvim
-1. Add the following line to your Neovim configuration file (init.lua for Lua-based configurations):
-
+### [packer.nvim](https://github.com/wbthomason/packer.nvim)
 ```lua
 use 's3dman/rundi.nvim'
 ```
-2. Reload your Neovim configuration or restart Neovim.
-3. Run :PackerInstall in Neovim to install the plugin.
 
 ## Configuration
 rundi.nvim offers several configuration options to customize its behavior. You can override these options in your Neovim configuration.
