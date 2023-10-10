@@ -42,4 +42,15 @@ local randi = require'randi'
 
 randi.setup({
   option_name_1 = "value_1",
-})```
+})
+
+## Usage
+Describe how to use the plugin once it's installed and configured. Include code examples or usage scenarios to help users get started.
+
+## License
+This plugin is licensed under the MIT License. See the LICENSE file for details.
+
+## Issues and Contributions
+If you encounter any issues or have suggestions for improvements, please open an issue on the GitHub repository.
+
+Contributions in the form of pull requests are welcome and greatly appreciated.
