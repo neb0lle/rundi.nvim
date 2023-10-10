@@ -48,7 +48,7 @@ rundi.setup({
     },
     c = {
       compiler = "gcc",
-      compiler_args = "-Wshadow -Wall -g -fsanitize=address -fsanitize=undefined -D_GLIBCXX_DEBUG",
+      compiler_args = "-Wall -g",
       output_format = "%:t:r",
     },
   },
