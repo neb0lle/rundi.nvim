@@ -62,8 +62,3 @@ Press `Ctrl + c` or whatever keymap that you configured.
 
 ## License
 This plugin is licensed under the MIT License. See the LICENSE file for details.
-
-## Issues and Contributions
-If you encounter any issues or have suggestions for improvements, please open an issue on the GitHub repository.
-
-Contributions in the form of pull requests are welcome and greatly appreciated.
