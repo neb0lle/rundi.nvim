@@ -48,7 +48,7 @@ randi.setup({
 ```
 
 ## Usage
-Describe how to use the plugin once it's installed and configured. Include code examples or usage scenarios to help users get started.
+#TODO
 
 ## License
 This plugin is licensed under the MIT License. See the LICENSE file for details.
