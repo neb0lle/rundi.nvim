@@ -62,3 +62,6 @@ Press `Ctrl + c` or whatever keymap that you configured.
 
 ## License
 This plugin is licensed under the MIT License. See the LICENSE file for details.
+
+## Author
+- [Neville](https://github.com/s3dman)
