@@ -2,6 +2,7 @@ local config = {
 	autocompile = {
 		python = {
 			compiler = "python3",
+            compiler_args = ""
 		},
 		cpp = {
 			compiler = "g++",
