@@ -82,11 +82,12 @@ local function RundiSetFlag(flags)
 end
 
 local function RundiSetConfig(new_config)
-    for key, value in pairs(new_config) do
-		if config[key] ~= nil then
-			config[key] = value
-		end
-	end
+    local chunks = vim.fn.split(config_str, "=")
+    local key = chunks[1]
+    local value = chunks[2]
+
+    if config[key] ~= nil then
+        config[key] = value
 end
 
 return {
