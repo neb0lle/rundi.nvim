@@ -85,10 +85,7 @@ local function RundiSetConfig(new_config)
     local chunks = vim.fn.split(new_config, "=")
     local key = chunks[1]
     local value = chunks[2]
-
-    if config[key] ~= nil then
-        config[key] = value
-    end
+    config[key] = value
 end
 
 return {
