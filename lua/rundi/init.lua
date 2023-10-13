@@ -50,7 +50,6 @@ local function setup(user_config)
 
     vim.cmd([[command! Rundi :luado require("rundi").Rundi()]])
     vim.cmd([[command! -nargs=* RundiSetFlag :luado require("rundi").RundiSetFlag(<f-args>)]])
-    vim.cmd([[command! -nargs=* RundiSetConfig :luado require("rundi").RundiSetConfig(<f-args>)]])
 end
 
 local function Rundi()
@@ -82,25 +81,8 @@ local function RundiSetFlag(flags)
     end
 end
 
-local function RundiSetConfig(new_config)
-    local chunks = vim.fn.split(new_config, '=')
-    local key = chunks[1]
-    local value = chunks[2]
-    config[key] = value
-
-	for filetype, options in pairs(config.autocompile) do
-		setup_autocompile(filetype, options)
-	end
-
-    vim.cmd([[command! Rundi :luado require("rundi").Rundi()]])
-    vim.cmd([[command! -nargs=* RundiSetFlag :luado require("rundi").RundiSetFlag(<f-args>)]])
-    vim.cmd([[command! -nargs=* RundiSetConfig :luado require("rundi").RundiSetConfig(<f-args>)]])
-
-end
-
 return {
 	setup = setup,
     Rundi = Rundi,
     RundiSetFlag = RundiSetFlag,
-    RundiSetConfig = RundiSetConfig
 }
