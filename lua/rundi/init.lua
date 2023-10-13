@@ -82,7 +82,13 @@ local function RundiSetFlag(flags)
 end
 
 local function RundiSetConfig(new_config)
-    setup(new_config)
+    if type(new_config) == 'string' then
+        user_config = vim.fn.json_decode(new_config)
+    end
+
+    if type(new_config) == 'table' then
+        setup(new_config)
+    end
 end
 
 return {
