@@ -12,12 +12,12 @@ You can install rundi.nvim using your preferred plugin manager for Neovim. Here 
 
 ### [vim-plug](https://github.com/junegunn/vim-plug)
 ```lua
-Plug 's3dman/rundi.nvim'
+Plug 'acmpesuecc/rundi.nvim'
 ```
 
 ### [packer.nvim](https://github.com/wbthomason/packer.nvim)
 ```lua
-use 's3dman/rundi.nvim'
+use 'acmpesuecc/rundi.nvim'
 ```
 
 ## Configuration
