@@ -82,7 +82,7 @@ local function RundiSetFlag(flags)
 end
 
 local function RundiSetConfig(new_config)
-    local chunks = vim.fn.split(config_str, "=")
+    local chunks = vim.fn.split(new_config, "=")
     local key = chunks[1]
     local value = chunks[2]
 
