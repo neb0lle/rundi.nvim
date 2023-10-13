@@ -1,5 +1,9 @@
 # rundi.nvim
 
+[![GitHub stars](https://img.shields.io/github/stars/acmpesuecc/rundi.nvim)](https://github.com/acmpesuecc/rundi.nvim/stargazers)
+[![GitHub issues](https://img.shields.io/github/issues/acmpesuecc/rundi.nvim)](https://github.com/acmpesuecc/rundi.nvim/issues)
+[![GitHub license](https://img.shields.io/github/license/acmpesuecc/rundi.nvim)](https://github.com/acmpesuecc/rundi.nvim/blob/main/LICENSE)
+
 rundi.nvim is a Neovim plugin that makes it easy to generate compile command mappings right within Neovim. It provides a simple interface to generate mappings for various filetypes and workflows.
 
 ## Installation
