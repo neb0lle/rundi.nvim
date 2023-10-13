@@ -88,6 +88,7 @@ local function RundiSetConfig(new_config)
 
     if config[key] ~= nil then
         config[key] = value
+    end
 end
 
 return {
