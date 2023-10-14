@@ -2,7 +2,7 @@ local config = {
 	autocompile = {
 		python = {
 			compiler = "python3",
-            compiler_args = ""
+            compiler_args = "",
 		},
 		cpp = {
 			compiler = "g++",
@@ -66,7 +66,7 @@ local function Rundi()
         vim.cmd("te " .. options.compiler .. compiler_args .. input_file .. output_flag .. execute_flag)
         vim.cmd("startinsert")
     else
-        print("Autocompile options not found for this filetype")
+        print("Error")
     end
 end
 
