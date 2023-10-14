@@ -56,7 +56,7 @@ local function Rundi()
     local filetype = vim.bo.filetype
     local options = config.autocompile[filetype]
 
-    if options ~= nil then
+    if options then
         local compiler_args = options.compiler_args and (" " .. options.compiler_args) or ""
         local output_flag = options.output_format and (" -o " .. options.output_format) or ""
         local execute_flag = options.output_format and (" && ./" .. options.output_format) or ""
@@ -65,8 +65,6 @@ local function Rundi()
         vim.cmd("split")
         vim.cmd("te " .. options.compiler .. compiler_args .. input_file .. output_flag .. execute_flag)
         vim.cmd("startinsert")
-    else
-        print("Error")
     end
 end
 
@@ -76,8 +74,6 @@ local function RundiSetFlag(flags)
 
     if options then
         options.compiler_args = flags
-    else
-        print("Autocompile options not found for this filetype")
     end
 end
 
