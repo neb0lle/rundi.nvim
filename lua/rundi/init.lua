@@ -56,7 +56,7 @@ local function Rundi()
     local filetype = vim.bo.filetype
     local options = config.autocompile[filetype]
 
-    if options then
+    if options ~= nil then
         local compiler_args = options.compiler_args and (" " .. options.compiler_args) or ""
         local output_flag = options.output_format and (" -o " .. options.output_format) or ""
         local execute_flag = options.output_format and (" && ./" .. options.output_format) or ""
